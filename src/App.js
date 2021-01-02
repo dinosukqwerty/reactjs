@@ -26,7 +26,7 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/About" component={About} />
         <Route exact path="/detail/:id" component={DetailComp} />
-        <Route exact path="/pemain" component={ListComp} />
+        <Route exact path="/daftarpemain" component={ListComp} />
         <Route exact path="/pemain/tambah" component={TambahComp}/>
       </Switch>
       </BrowserRouter>

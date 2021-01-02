@@ -25,6 +25,7 @@ class ListComp extends Component {
     //     })
     // }
 
+    //api google spreadsheet pakai sheetbest 
     componentDidMount(){
         axios.get(`https://sheet.best/api/sheets/d592b003-ff1d-4260-aa8f-41115ea47047`)
             .then(res=>{
