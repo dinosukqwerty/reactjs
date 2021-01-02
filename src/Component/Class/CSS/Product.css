@@ -1,0 +1,22 @@
+.box-stok {
+    width: 100px;
+    display: inline-block;
+    height: auto;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-stok img{
+    width: 100px;
+    height: 100px;
+}
+
+.btn-click {
+    background-color: rgb(156, 15, 15);
+    width: 100px;
+    color: white;
+    padding: 10px;
+    border: none;
+     
+}
