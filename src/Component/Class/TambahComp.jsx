@@ -15,6 +15,8 @@ export default function TambahComp() {
         e.preventDefault();
         const {nama, hobi, julukan, posisi} = formData
         try {
+
+            //    //api google spreadsheet pakai nocodeapi 
             const response = await fetch(
                 "https://v1.nocodeapi.com/reactapi/google_sheets/cCnkarEpcUOJoIMx?tabId=Sheet1",
                 {
