@@ -9,11 +9,18 @@ import About from "./Component/Fungsional/About"
 import DetailComp from './Component/Fungsional/DetailComp';
 import ListComp from './Component/Class/ListComp';
 import TambahComp from './Component/Class/TambahComp';
-
+import { makeStyles } from '@material-ui/styles';
+ 
 //import BootstrapClass from "./Component/Class/BootstrapClass";
 
 //import Parent from "./Component/Class/Parent";
 
+const useStyles = makeStyles((theme)=>({
+  root: {
+    minHeight : '100vh',
+    backgroundImage : `url(${process.env.PUBLIC_URL + '/assets/daun.jpg'})`
+  },
+}));
 
 
 const App = () => {
