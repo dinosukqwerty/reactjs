@@ -15,34 +15,50 @@ import { makeStyles } from '@material-ui/styles';
 
 //import Parent from "./Component/Class/Parent";
 
-const useStyles = makeStyles((theme)=>({
+ const useStyles = makeStyles((theme)=>({
   root: {
-    minHeight : '100vh',
-    backgroundImage : `url(${process.env.PUBLIC_URL + '/assets/daun.jpg'})`
+    minHeight : '50vh',
+    backgroundImage : `url(${process.env.PUBLIC_URL + '/assets/warna.jpg'})`,
+    backgroundRepeat : 'no-repeat',
+    backgroundSize : 'cover',
   },
 }));
 
 
-const App = () => {
-  return (
+// const App = () => {
+//   return (
+//     <div>
+//       <BrowserRouter>    
+//       <NavbarComponent/>
+//       <Switch>
+//         <Route exact path="/" component={HomePage} />
+//         <Route exact path="/About" component={About} />
+//         <Route exact path="/detail/:id" component={DetailComp} />
+//         <Route exact path="/pemain" component={ListComp} />
+//         <Route exact path="/pemain/tambah" component={TambahComp}/>
+//       </Switch>
+//       </BrowserRouter>
+//     </div>
 
-    <div>
-      <BrowserRouter>    
+//   );
+// }
+
+export default function App(){
+  const classes = useStyles();
+  return <div className={classes.root}>
+     <BrowserRouter>    
       <NavbarComponent/>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/About" component={About} />
         <Route exact path="/detail/:id" component={DetailComp} />
-        <Route exact path="/daftarpemain" component={ListComp} />
-        <Route exact path="/daftarpemain/tambah" component={TambahComp}/>
+        <Route exact path="/pemain" component={ListComp} />
+        <Route exact path="/pemain/tambah" component={TambahComp}/>
       </Switch>
       </BrowserRouter>
-    </div>
-
-  );
+  </div>
 }
-
-export default App;
+// export default App;
 
 // import React, { useState } from "react";
 
