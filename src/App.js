@@ -8,10 +8,12 @@ import HomePage from "./Component/Fungsional/HomePage"
 import About from "./Component/Fungsional/About"
 import DetailComp from './Component/Fungsional/DetailComp';
 import ListComp from './Component/Class/ListComp';
+import ListMahasiswa from './Component/Class/ListMahasiswa';
 import TambahComp from './Component/Class/TambahComp';
 import { makeStyles } from '@material-ui/styles';
  
-//import BootstrapClass from "./Component/Class/BootstrapClass";
+import BootstrapClass from "./Component/Class/BootstrapClass";
+import TambahMahasiswa from './Component/Class/TambahMahasiswa';
 
 //import Parent from "./Component/Class/Parent";
 
@@ -54,6 +56,9 @@ export default function App(){
         <Route exact path="/detail/:id" component={DetailComp} />
         <Route exact path="/pemain" component={ListComp} />
         <Route exact path="/pemain/tambah" component={TambahComp}/>
+        <Route exact path="/tampilmahasiswa" component={ListMahasiswa}/>
+        <Route exact path="/tampilmahasiswa/tambah" component={TambahMahasiswa}/>
+
       </Switch>
       </BrowserRouter>
   </div>
