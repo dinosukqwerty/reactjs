@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 //import qs from 'querystring';
 import { Container, Table ,  NavLink, Button} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const api = "http://localhost:3001" 
 
@@ -45,11 +46,27 @@ class ListMahasiswa extends Component {
 
                 <tbody className=''>
                   {this.state.mahasiswa.map(mahasiswa =>
-                      <tr>
+                      <tr key={mahasiswa.id_mahasiswa}>
                           <td>{mahasiswa.nim}</td>
                           <td>{mahasiswa.nama}</td>
                           <td>{mahasiswa.jurusan}</td>
-                          <td>Edit | Hapus</td>
+                          <td>
+                            <Link to = 
+                            {
+                                {
+                                    pathname: '/tampilmahasiswa/ubah',
+                                    state: {
+                                        id_mahasiswa: mahasiswa.id_mahasiswa,
+                                        nim: mahasiswa.nim,
+                                        nama: mahasiswa.nama,
+                                        jurusan: mahasiswa.jurusan
+    
+                                    }
+    
+                                }
+                            }> <Button>EDIT</Button>
+                            </Link>
+                          </td>
                       </tr>
                   )}
                 </tbody>
