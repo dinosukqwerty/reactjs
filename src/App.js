@@ -15,6 +15,8 @@ import { makeStyles } from '@material-ui/styles';
 // import BootstrapClass from "./Component/Class/BootstrapClass";
 import TambahMahasiswa from './Component/Class/TambahMahasiswa';
 import EditMahasiswa from './Component/Class/EditMahasiswa';
+import ClassComp from './Component/Hooks/Class/ClassComp';
+import HooksComp from './Component/Hooks/Fungsional/HooksComp';
 
 //import Parent from "./Component/Class/Parent";
 
@@ -60,7 +62,8 @@ export default function App(){
         <Route exact path="/tampilmahasiswa" component={ListMahasiswa}/>
         <Route exact path="/tampilmahasiswa/tambah" component={TambahMahasiswa}/>
         <Route exact path="/tampilmahasiswa/ubah" component={EditMahasiswa}/>
-
+        <Route exact path="/Class" component={ClassComp}/>
+        <Route exact path="/Hooks" component={HooksComp}/>
       </Switch>
       </BrowserRouter>
   </div>

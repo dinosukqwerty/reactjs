@@ -36,7 +36,12 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink href="/tampilmahasiswa">DAFTAR MAHASISWA</NavLink>
             </NavItem>
-            
+            <NavItem>
+              <NavLink href="/Class">ClassComp</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/Hooks">HooksComp</NavLink>
+            </NavItem>
           </Nav>
           <NavbarText>Sukma Rizki Andiantiko</NavbarText>
         </Collapse>
