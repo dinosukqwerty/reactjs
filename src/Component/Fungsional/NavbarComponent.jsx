@@ -42,6 +42,9 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink href="/Hooks">HooksComp</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/Datamahasiswauseeffect">DataMahasiswaUseEffect</NavLink>
+            </NavItem>
           </Nav>
           <NavbarText>Sukma Rizki Andiantiko</NavbarText>
         </Collapse>
