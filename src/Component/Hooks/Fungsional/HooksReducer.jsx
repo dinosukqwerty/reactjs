@@ -1,12 +1,25 @@
 import React, {useReducer}from 'react'
 import { Container, Row, Col, Card, CardImg, Button} from 'reactstrap'
 
-const initialState = 0
+const initialState = {
+    jumlah : 1,
+    hargasatuan: 120000,
+    hargatotal:0
+
+}
 
 const reducer = (state, action) => {
-    switch (action) {
-        case 'tambah': return state + 1
-        case 'kurang' : return state - 1    
+    switch (action.type) {
+        case 'tambah': return {
+            ...state,
+            jumlah: state.jumlah + 1,
+            hargatotal: state.hargasatuan + (state.hargasatuan * state.jumlah)
+        }
+        case 'kurang' : return {
+            ...state,
+            jumlah: state.jumlah - 1,
+            hargatotal: (state.hargasatuan * state.jumlah) - state.hargasatuan
+        }  
         default:
             return state
     }
@@ -30,10 +43,11 @@ function HooksReducer() {
                     <h2>Harga : 120.000</h2>
                     <h3>Jumlah barang yang ada pesan</h3>
                     <Row>
-                        <Col><Button onClick={()=>dispatch('tambah')} color="primary">+</Button></Col>
-                        <Col> {count} </Col>
-                        <Col><Button onClick={()=>dispatch('kurang')} color="warning">-</Button></Col>
+                        <Col><Button onClick={()=>dispatch({type: 'tambah'})} color="primary">+</Button></Col>
+                        <Col> {count.jumlah} </Col>
+                        <Col><Button onClick={()=>dispatch({type: 'kurang'})} color="warning">-</Button></Col>
                     </Row>
+                    <Button color="success" size="lg">Total : RP. {count.hargatotal}</Button>
                 </Col>
             </Row>
             <br/>
