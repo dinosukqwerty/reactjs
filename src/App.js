@@ -22,6 +22,7 @@ import { CartContext } from '../src/CartContext.jsx';
 //import Parent from "./Component/Class/Parent";
 import { useState } from 'react'
 import ProductComp from './Component/Hooks/Fungsional/ProductComp';
+import HooksReducer from './Component/Hooks/Fungsional/HooksReducer';
 
  const useStyles = makeStyles((theme)=>({
   root: {
@@ -73,6 +74,7 @@ export default function App(){
         <Route exact path="/Hooks" component={HooksComp}/>
         <Route exact path="/Datamahasiswauseeffect" component={HooksUseEffect}/>
         <Route exact path="/PRODUCT" component={ProductComp}/>
+        <Route exact path="/hooksreducer" component={HooksReducer}/>
       </Switch>
       </CartContext.Provider>  
       </BrowserRouter>

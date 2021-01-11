@@ -53,6 +53,9 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink to="/PRODUCT" className="nav-link">PRODUCT KAMI</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink to="/hooksreducer" className="nav-link">reducer</NavLink>
+            </NavItem>
           </Nav>
           <NavbarText>
             <Button color="danger">
