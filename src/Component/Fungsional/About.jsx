@@ -1,12 +1,16 @@
 import React from 'react'
 import { Jumbotron, Button, Container, Row, Col } from 'reactstrap';
+import { CartContext } from '../../CartContext';
 import CardComp from './CardComp';
-
+import {useContext} from 'react'
 function About() {
+
+
+    
     return (
         <div>
             <Jumbotron>
-            <h1 className="display-3">About us</h1>
+            <h1 className="display-3">About us </h1>
             <p className="lead">Hallo</p>
             <hr className="my-2" />
             <p>INI Halaman About pake Router</p>

@@ -18,8 +18,10 @@ import EditMahasiswa from './Component/Class/EditMahasiswa';
 import ClassComp from './Component/Hooks/Class/ClassComp';
 import HooksComp from './Component/Hooks/Fungsional/HooksComp';
 import HooksUseEffect from './Component/Hooks/Fungsional/HooksUseEffect';
-
+import { CartContext } from '../src/CartContext.jsx';
 //import Parent from "./Component/Class/Parent";
+import { useState } from 'react'
+import ProductComp from './Component/Hooks/Fungsional/ProductComp';
 
  const useStyles = makeStyles((theme)=>({
   root: {
@@ -51,8 +53,12 @@ import HooksUseEffect from './Component/Hooks/Fungsional/HooksUseEffect';
 
 export default function App(){
   const classes = useStyles();
+
+  const [value, setValue] = useState(0)
+
   return <div className={classes.root}>
-     <BrowserRouter>    
+     <BrowserRouter>   
+     <CartContext.Provider value={{value, setValue}}>
       <NavbarComponent/>
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -66,7 +72,9 @@ export default function App(){
         <Route exact path="/Class" component={ClassComp}/>
         <Route exact path="/Hooks" component={HooksComp}/>
         <Route exact path="/Datamahasiswauseeffect" component={HooksUseEffect}/>
+        <Route exact path="/PRODUCT" component={ProductComp}/>
       </Switch>
+      </CartContext.Provider>  
       </BrowserRouter>
   </div>
 }
